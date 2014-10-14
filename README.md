@@ -8,12 +8,12 @@ In Ionic's project, you can initialize the SDK like this:
 
 
 ```
+  $ionicPlatform.ready ->
 	appId = 1111 // appId registerd with PartyTrack
 	appKey = "APP_KEY" // appKey registerd with PartyTrack
 	onSuccess = () => {} // callback for success
 	onError = () => {} // callback for error
-    $ionicPlatform.ready ->
-        partytrack.startWithAppIDAndKey(appId, appKey, onSuccess, onError)
+    partytrack.startWithAppIDAndKey(appId, appKey, onSuccess, onError)
 ```
 
 ## See Also
