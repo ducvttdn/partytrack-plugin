@@ -7,5 +7,6 @@
 }
 
 - (void) startWithAppIDAndKey: (CDVInvokedUrlCommand*) command;
+- (void) setConfigureWithNameAndValue: (CDVInvokedUrlCommand*) command;
 
 @end
