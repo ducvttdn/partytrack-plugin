@@ -16,4 +16,16 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)setConfigureWithNameAndValue: (CDVInvokedUrlCommand*) command
+{
+    CDVPluginResult* pluginResult = nil;
+    NSString* configureName = [command.arguments objectAtIndex:0];
+    NSString* configureValue = [command.arguments objectAtIndex:1];
+
+    [[Partytrack sharedInstance] setConfigureWithName:configureName AndValue:configureValue];
+
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
 @end
