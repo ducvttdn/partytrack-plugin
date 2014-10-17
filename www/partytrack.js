@@ -5,7 +5,7 @@
     cordova.exec(onSuccess, onError, 'PartyTrack', 'startWithAppIDAndKey', [appId, appKey]);
   }
 
-  PartytrackPlugin.prototype.setConfigureWithNameAndValue = function(configureName, configureValue) {
+  PartytrackPlugin.prototype.setConfigureWithNameAndValue = function(configureName, configureValue, onSuccess, onError) {
     cordova.exec(onSuccess, onError, 'PartyTrack', 'setConfigureWithNameAndValue', [configureName, configureValue]);
   }
 
